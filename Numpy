@@ -1,0 +1,134 @@
+Q1. Write a NumPy program to concatenate element-wise two arrays of string.
+
+Code:
+import numpy as np
+a1 = np.array(['CSK', 'MI'], dtype=np.str)
+a2 = np.array([' RR', ' RCB'], dtype=np.str)
+print("Array1:")
+print(a1)
+print("Array2:")
+print(a2)
+new_array = np.char.add(a1, a2)
+print("new array:")
+print(new_array)
+
+Q2. Write a NumPy program to repeat all the elements three times of a given array of string.
+
+Code:
+import numpy as np
+a1 = np.array(['English', 'Hindi', 'Maths', 'Science'], dtype=np.str)
+print("Original Array:")
+print(a1)
+new_array = np.char.multiply(x1, 3)
+print("New array:")
+print(new_array)
+
+Q3. Write a NumPy program to capitalize the first letter, lowercase, uppercase, swapcase, title-case of all the elements of a given array.
+
+Code:
+import numpy as np
+x = np.array(['Vaibhav', 'Krishna', 'Sparsh', 'Tushar'], dtype=np.str)
+print("Original Array:")
+print(x)
+capitalized_case = np.char.capitalize(x)
+lowered_case = np.char.lower(x)
+uppered_case = np.char.upper(x)
+swapcased_case = np.char.swapcase(x)
+titlecased_case = np.char.title(x)
+print("\nCapitalized: ", capitalized_case)
+print("Lowered: ", lowered_case)
+print("Uppered: ", uppered_case)
+print("Swapcased: ", swapcased_case)
+print("Titlecased: ", titlecased_case)
+
+
+Q4. Write a NumPy program to remove the leading and trailing whitespaces of all the elements of a given array.
+
+Code:
+import numpy as np
+x = np.array([' Diya ', ' Shyama  ', ' Khushi  ', '  Kashish'], dtype=np.str)
+print("Original Array:")
+print(x)
+stripped = np.char.strip(x)
+print("\nRemove the leading and trailing whitespaces: ", stripped)
+
+Q5. Write a NumPy program to split the element of a given array with spaces.
+
+Code:
+import numpy as np
+x = np.array(['Abhishek_Sir Vinay_Sir Farman_Sir Mukund_Sir'], dtype=np.str)
+print("Original Array:")
+print(x)
+r = np.char.split(x)
+print("\nSplit the element of the said array with spaces: ")
+print(r)
+
+Q6. Write a NumPy program to split the element of a given array to multiple lines.
+
+Code:
+import numpy as np
+x = np.array(['Love, Live, Life'], dtype=np.str)
+print("Original Array:")
+print(x)
+r = np.char.splitlines(x)
+print(r)
+
+Q7. Write a NumPy program to make all the elements of a given string to a numeric string of 5 digits with zeros on its left.
+
+Code:
+import numpy as np
+x = np.array(['27', '119', '2349', '12345', '125'], dtype=np.str)
+print("\nOriginal Array:")
+print(x)
+r = np.char.zfill(x, 5)
+print("\nNumeric string of 5 digits with zeros:")
+print(r)
+
+Q8. Write a NumPy program to count the number of "P" in a given array, element-wise.
+
+Code:
+import numpy as np
+x1 = np.array(['Pycharm', 'Python', 'Jyoti', 'examples', 'hdmi'], dtype=np.str)
+print("\nOriginal Array:")
+print(x1)
+print("Number of ‘P’:")
+r = np.char.count(x1, "P")
+print(r)
+
+Q9. Write a NumPy program to test equal, not equal, greater equal, greater and less test of all the elements of two given arrays.
+
+Code:
+import numpy as np
+x1 = np.array(['I', 'Love', 'You', 'So_much', 'Dad'], dtype=np.str)
+x2 = np.array(['I', 'Love', 'You', 'So_much', 'Mom'], dtype=np.str)
+print("\nArray1:")
+print(x1)
+print("Array2:")
+print(x2)
+print("\nEqual test:")
+r = np.char.equal(x1, x2)
+print(r)
+print("\nNot equal test:")
+r = np.char.not_equal(x1, x2)
+print(r)
+print("\nLess equal test:")
+r = np.char.less_equal(x1, x2)
+print(r)
+print("\nGreater equal test:")
+r = np.char.greater_equal(x1, x2)
+print(r)
+print("\nLess test:")
+r = np.char.less(x1, x2)
+print(r)
+
+Q10. Write a NumPy program to replace "Point" with "Pointless" in the element of a given array.
+
+Code:
+import numpy as np
+x = np.array(['Pointless Persons, Pointed, Out'], dtype=np.str)
+print("\nOriginal Array:")
+print(x)
+r = np.char.replace(x, "Pointless", "Point")
+print("\nNew array:")
+print(r)
+
