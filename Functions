@@ -1,0 +1,112 @@
+Q1. Write a Python Function to take a number and power as arguments and return the value of number raised to the given power.
+
+Code:
+def power(num,po):
+  c=num**po
+  return c
+print(pow(2,3))
+
+Q2. Write a Python function to print factorial of an inputted number.
+
+Code:
+def factorial(n):
+  fact=1
+  s=1
+  for i in range(n):
+    s=s*fact
+    fact=fact+1
+  return s
+ 
+ Q3. Write a Python function to count the number of vowels in a string.
+ 
+ Code:
+ def vowel(s):
+  l=['a','e','i','o','u']
+  c=0
+  for i in s:
+    if i in l:
+      c=c+1
+  return c
+  
+  Q4. Write a python function to check pallindrome.
+  
+  Code:
+  def pall(s):
+    if s==s[::-1]:
+      print("pallindrome")
+    else:
+      print("Not a Pallindrome")
+      
+ Q5. Write a Python function to print the sum of digits of a number.
+ 
+ Code:
+ def sumnum(num):
+  c=0
+  while num>0:
+    s=n%10
+    c=c+s
+    n=n//10
+   return c
+   
+ Q6. Write a Python function to check whether an inputted number is prime or not.
+ 
+ Code:
+ def prime(n):
+  s=0
+  for i in range(1,n//2):
+    if n%i==0:
+      s=s+i
+   if s==n+1:
+    print("prime")
+   else:
+    print("Non-Prime")
+    
+  Q7. Write a function to return the ascii character of a number.
+  
+  Code:
+  def ascii(n):
+    return chr(n)
+    
+  Q8. Write a function in Python to print all the even numbers for an inputted range as arguments.
+  
+  Code:
+  def even(ll,ul):
+    for i in range(ll,ul+1):
+      if i %2==0:
+        print(i)
+   
+   Q9. Write a python function to check whether a character is a capital aphabet, small alphabet or a number or a special character with character inputted as an argument.
+   
+   Code:
+   def check(ch):
+    if ord(ch)>=97 and ord(ch)<=122:
+      s="Small alphabet")
+    if ord(ch)>=65 and ord(ch)>=90:
+      s="Capital alphabet"
+    if ord(ch)>=49 and ord(ch)<=57:
+      s="Number"
+    else:
+      s="special character"
+    return s
+   
+   Q10. Write a Python function to do the operation with taking thee numbers and the operator string as arguments.
+   
+   Code:
+   def cal(num1,num2,op):
+    if op=="+":
+      return num1+num2
+    elif op=="-":
+      return num1-num2
+     elif op=="*":
+      return num1*num2
+     elif op=="/":
+      return num1/num2
+     elif op=="%":
+      return num1%num2
+     else:
+      print("invalid operator")
+    
+    
+     
+    
+  
