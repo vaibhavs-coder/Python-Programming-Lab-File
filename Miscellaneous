@@ -1,0 +1,218 @@
+File Handling:
+
+Q1. Write a Python program to count the number of lines in a text file.
+
+Code:
+def file(fn):
+        with open(fn) as f:
+                for i, l in enumerate(f):
+                        pass
+        return i + 1
+print("Number of lines in the file: ",file("test.txt"))
+
+Q2. Write a python program to find the longest words.
+
+Code:
+def long(fn):
+    with open(fn, 'r') as infile:
+              words = infile.read().split()
+    maxl = len(max(words, key=len))
+    return [word for word in words if len(word) == maxl]
+
+print(long('test.txt'))
+
+Q3. Write a Python program to read an entire text file.
+
+Code:
+def read(fn):
+        txt = open(fn)
+        print(txt.read())
+
+read('test.txt')
+
+Q4. Write a Python program to read a file line by line and store it into a list.
+
+Code:
+def file_read(fname):
+        with open(fname) as f:
+                #Content_list is the list that contains the read lines.     
+                content_list = f.readlines()
+                print(content_list)
+
+
+Q5. Write a Python program to read a file line by line store it into a variable.
+
+Code:
+def file_read(fname):
+        with open (fname, "r") as myfile:
+                data=myfile.readlines()
+                print(data)
+file_read('test.txt')
+
+
+Math Module:
+
+Q1. Write a Python program to convert degree to radian.
+
+Code:
+from math import pi
+def degrees_to_rads(deg):
+  return (deg * pi) / 180.0
+print(degrees_to_rads(180))
+print(degrees_to_rads(90))
+
+
+Q2. Write a python program to find the area of a circle.
+
+Code:
+from math import pi
+def circle(radius):
+  return pi*radius*radius
+  
+Q3. Write a Python program to find the value of ln x using log x from math module.
+
+
+Code:
+import math
+x=int(input("enter the integer:"))
+lnx=2.303*(math.log(x))
+print(lnx)
+
+Q4. Write a python program to find the tangent of a given number.
+
+Code:
+import math as m:
+x=int(input("enter the number"))
+tanx=m.tan(x)
+print(tanx)
+
+Q5. two functions can have same values at two different points check whether sin and cos functions have same values at 60?
+
+Code:
+import math
+if math.sin(60)==math.cos(60):
+  print('Same")
+ else:
+  print("Different")
+  
+  Random Module:
+  
+  Q1. Write a Python program to generate a random alphabetical character, alphabetical string and alphabetical string of a fixed length.
+  
+  Code:
+import random
+import string
+print("Generate a random alphabetical character:")
+print(random.choice(string.ascii_letters))
+print("\nGenerate a random alphabetical string:")
+max_length = 255
+str1 = ""
+for i in range(random.randint(1, max_length)):
+    str1 += random.choice(string.ascii_letters)
+print(str1)
+print("\nGenerate a random alphabetical string of a fixed length:")
+str1 = ""
+for i in range(10):
+    str1 += random.choice(string.ascii_letters)
+print(str1)
+
+Q2. Write a Python program to construct a seeded random number generator, also generate a float between 0 and 1, excluding 1.
+
+Code:
+import random
+print("Construct a seeded random number generator:")
+print(random.Random().random())
+print(random.Random(0).random())
+print("\nGenerate a float between 0 and 1, excluding 1:")
+print(random.random())
+
+Q3. Write a Python program to generate a random integer between 0 and 6 - excluding 6, random integer between 5 and 10 - excluding 10, random integer between 0 and 10, with a step of 3 and random date between two dates.
+
+Code:
+import random
+import datetime
+print("Generate a random integer between 0 and 6:")
+print(random.randrange(5))
+print("Generate random integer between 5 and 10, excluding 10:")
+print(random.randrange(start=5, stop=10))
+print("Generate random integer between 0 and 10, with a step of 3:")
+print(random.randrange(start=0, stop=10, step=3))
+print("\nRandom date between two dates:")
+start_dt = datetime.date(2019, 2, 1)
+end_dt = datetime.date(2019, 3, 1)
+time_between_dates = end_dt - start_dt
+days_between_dates = time_between_dates.days
+random_number_of_days = random.randrange(days_between_dates)
+random_date = start_dt + datetime.timedelta(days=random_number_of_days)
+print(random_date)
+
+Q4. Write a python program to generate a random color from a list of colors.
+
+Code:
+import random
+l=['red','yellow','green','blue']
+random_num = random.choice(l)
+print(random_num)
+
+Q5. Write a python program to shuffle a list.
+
+Code:
+import random
+
+mylist = ["apple", "banana", "cherry"]
+random.shuffle(mylist)
+
+print(mylist) 
+
+
+Exception Handling
+
+Q1. Write the python code to show exception for writting a file which is readable only.
+
+Code:
+try:
+   fh = open("testfile", "r")
+   fh.write("This is my test file for exception handling!!")
+except IOError:
+   print "Error: can\'t find file or read data"
+else:
+   print "Written content in the file successfully"
+   
+ Q2. Write a Python program to print one message if the try block raises a NameError and another for other errors.
+ 
+ Code:
+ try:
+  print(x)
+except NameError:
+  print("Variable x is not defined")
+except:
+  print("Something else went wrong") 
+  
+  Q3. Write a Python program to raise a TypeError if x is not an integer.
+  
+  Code:
+  x = "hello"
+
+if not type(x) is int:
+  raise TypeError("Only integers are allowed") 
+  
+ Q4. Write a python program to raise an error and stop the program if x is lower than 0.
+ 
+ Code:
+ x = -1
+
+if x < 0:
+  raise Exception("Sorry, no numbers below zero") 
+  
+  Q5. Write try except block for zero division error.
+
+Code:
+ a = 5
+ b = 0
+ try:
+    print(a/b)
+ except ZeroDivisionError:
+    print(“You can’t divide with 0”)
+
+
+
